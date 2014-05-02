@@ -1,0 +1,101 @@
+body {
+  font-family: 'Varela Round', 'Helvetica', 'Arial', sans-serif;
+  color: #AAA;
+}
+::selection {
+  background: #ff7900;
+}
+::-moz-selection {
+  background: #ff7900;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+}
+
+.br-line {
+  border-left: 7px solid #AAA;
+  margin: 10% auto;
+}
+.br-line h1 {
+  margin-left: -18px;
+  font-size: 48px;
+  line-height: 34px;
+  text-rendering: optimizeLegibility;
+}
+.br-line img {
+  margin-left: -52px;
+}
+.br-line h1 {
+  background: #FFF;
+}
+img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  margin: 20px 0 0;
+  border: 5px solid #AAA;
+  background: #AAA;
+}
+.headshot {
+  height: 100px;
+  width: 100px;
+  filter: url(filters.svg#grayscale);
+  filter: gray;
+  -webkit-filter: grayscale(1);
+}
+.headshot:hover, .headshot:active {
+  filter: none;
+  -webkit-filter: none;
+}
+.br-line a {
+  text-decoration: none;
+}
+.br-line span {
+  visibility: hidden;
+  font-weight: bold;
+  font-size: 25px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  margin-left: 10px;
+  opacity: 0;
+}
+.br-line a:hover span {
+  visibility: visible;
+  margin-left: 0px;
+  opacity: 1;
+}
+.br-line .fa {
+  border-radius: 50%;
+  font-size: 25px;
+  margin: 20px 0 0 -30px;
+  z-index: 100;
+  background: #FFF;
+  border: 5px solid #AAA;
+  line-height: 20px;
+  padding: 10px;
+  color: #AAA;
+}
+.br-line .fa-twitter:hover, .br-line .fa-twitter:hover + span {
+  color: #4099FF !important;
+  border-color: #4099FF;
+}
+.br-line .fa-linkedin:hover, .br-line .fa-linkedin:hover + span {
+  color: #4875B4 !important;
+  border-color: #4875B4;
+}
+.br-line .fa-google-plus:hover, .br-line .fa-google-plus:hover + span{
+  color: #C63D2D !important;
+  border-color: #C63D2D;
+}
+.br-line .fa-github-alt:hover, .br-line .fa-pencil:hover,
+.br-line .fa-github-alt:hover + span,  .br-line .fa-pencil:hover + span {
+  color: #333 !important;
+  border-color: #333;
+}
+.br-line .fa-envelope:hover, .br-line .fa-envelope:hover + span {
+  color: #3db517 !important;
+  border-color: #3db517;
+}
