@@ -1,56 +1,51 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Cyriac Thomas' Thoughts</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400|Varela+Round' rel='stylesheet' type='text/css'>
-
-    <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
-    <![endif]-->
-  </head>
-  <body>
+---
+layout: default
+---
+<section class="hero is-warning is-fullheight">
+  <div class="hero-content">
     <div class="container">
-      <div class='row'>
-        <div class='col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-2'>
-          <div class='br-line'>
-            <h1>Thoughts</h1>
-            <img src='//www.gravatar.com/avatar/0ffdfa5b2f07204093bb08825f2ec9f1.png?s=300' class='headshot'/>
-            <div><a href="https://github.com/cyriac"><i class='fa fa-github-alt'></i> <span>Github</span></a></div>
-            <div><a href="https://twitter.com/cyriacthomas"><i class='fa fa-twitter'></i> <span>Twitter</span></a></div>
-            <div><a href="https://plus.google.com/+CyriacThomas"><i class='fa fa-google-plus'></i> <span>Google+</span></a></div>
-            <div><a href="https://linkedin.com/in/cyriacthomas"><i class='fa fa-linkedin'></i> <span>LinkedIn</span></a></div>
-            <div><a href="https://medium.com/@cyriacthomas"><i class='fa fa-pencil'></i> <span>Medium</span></a></div>
-            <div><a href="mailto:me@cyriacthomas.com"><i class='fa fa-envelope'></i> <span>E-mail</span></a></div>
-            <!--<div><a href="#"><i class='fa fa-flask'></i></a></div>-->
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <figure class="card-image is-square">
+              <img src="{{ site.hero_image }}" alt="">
+            </figure>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-5">{{ site.name }}</p>
+                  {% if site.twitter_username %}
+                  <p class="subtitle is-6">@{{ site.twitter_username }}</p>
+                  {% endif %}
+                </div>
+              </div>
+
+              <div class="content">
+                {{ site.description }}
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="column">
+          <ul class="post-list">
+            {% for post in site.posts %}
+              <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+                <h2>
+                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h2>
+              </li>
+            {% endfor %}
+          </ul>
         </div>
       </div>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-    <script type="text/javascript">
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-        try {
-            var pageTracker = _gat._getTracker("UA-12946032-1");
-            pageTracker._setDomainName(".cyriacthomas.com");
-            pageTracker._trackPageview();
-        } catch(err) {}</script>
+  </div>
+</section>
 
-  </body>
-</html>
+<div class="container">
+<div class="column">
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+</div>
+</div>
