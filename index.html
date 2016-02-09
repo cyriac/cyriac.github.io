@@ -6,7 +6,7 @@ layout: default
     <div class="container">
       <div class="columns">
         <div class="column">
-          <div class="card">
+          <div class="card is-left">
             <figure class="card-image is-square">
               <img src="{{ site.hero_image }}" alt="">
             </figure>
@@ -23,29 +23,16 @@ layout: default
               <div class="content">
                 {{ site.description }}
               </div>
+              <div class="content">
+              <a class="fa fa-rss-square" href="{{ "/feed.xml" | prepend: site.baseurl }}"></a>
+              </div>
             </div>
           </div>
         </div>
         <div class="column">
-          <ul class="post-list">
-            {% for post in site.posts %}
-              <li>
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-                <h2>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h2>
-              </li>
-            {% endfor %}
-          </ul>
+          {% include blog_roll.html %}
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<div class="container">
-<div class="column">
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-</div>
-</div>
