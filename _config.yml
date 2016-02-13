@@ -19,7 +19,7 @@ medium_username: cyriacthomas
 google_plus_username: CyriacThomas
 linkedin_username: cyriacthomas
 
-hero_image: "https://www.gravatar.com/avatar/0ffdfa5b2f07204093bb08825f2ec9f1.png?s=300"
+gravatar_hash: "0ffdfa5b2f07204093bb08825f2ec9f1.png"
 
 # Build settings
 markdown: kramdown
