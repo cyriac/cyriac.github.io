@@ -6,28 +6,7 @@ layout: default
     <div class="container">
       <div class="columns">
         <div class="column">
-          <div class="card is-left">
-            <figure class="card-image is-square">
-              <img src="{{ site.hero_image }}" alt="">
-            </figure>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-5">{{ site.name }}</p>
-                  {% if site.twitter_username %}
-                  <p class="subtitle is-6">@{{ site.twitter_username }}</p>
-                  {% endif %}
-                </div>
-              </div>
-
-              <div class="content">
-                {{ site.description }}
-              </div>
-              <div class="content">
-              <a class="fa fa-rss-square" href="{{ "/feed.xml" | prepend: site.baseurl }}"></a>
-              </div>
-            </div>
-          </div>
+          {% include intro_card.html %}
         </div>
         <div class="column">
           {% include blog_roll.html %}

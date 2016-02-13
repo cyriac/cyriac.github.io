@@ -1,0 +1,28 @@
+<div class="card is-left">
+  <figure class="card-image is-square">
+    <img src="{{ site.hero_image }}" alt="">
+  </figure>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-5">{{ site.name }}</p>
+        {% if site.twitter_username %}
+        <p class="subtitle is-6">@{{ site.twitter_username }}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="content">
+      {{ site.description }}
+    </div>
+    <div class="content">
+      <a class="fa fa-envelope" href="mailto:{{ site.email }}"></a>
+      <a class="fa fa-github" href="https://github.com/{{ site.github_username }}"></a>
+      <a class="fa fa-twitter" href="https://twitter.com/{{ site.twitter_username }}"></a>
+      <a class="fa fa-medium" href="https://medium.com/@{{ site.medium_username }}"></a>
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/{{ site.linkedin_username }}"></a>
+      <a class="fa fa-google-plus" href="https://plus.google.com/+{{ site.google_plus_username }}"></a>
+      <a class="fa fa-rss-square" href="{{ "/feed.xml" | prepend: site.baseurl }}"></a>
+    </div>
+  </div>
+</div>

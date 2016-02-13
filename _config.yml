@@ -8,15 +8,17 @@
 # Site settings
 title: Thoughts
 email: me@cyriacthomas.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.cyriacthomas.com" # the base hostname & protocol for your site
 name: Cyriac Thomas
+
 twitter_username: cyriacthomas
 github_username:  cyriac
+medium_username: cyriacthomas
+google_plus_username: CyriacThomas
+linkedin_username: cyriacthomas
+
 hero_image: "https://www.gravatar.com/avatar/0ffdfa5b2f07204093bb08825f2ec9f1.png?s=300"
 
 # Build settings
@@ -24,5 +26,5 @@ markdown: kramdown
 exclude: [vendor]
 gems: [jekyll-paginate]
 
-paginate: 5
+paginate: 3
 paginate_path: "/blog-page-:num/"
