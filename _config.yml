@@ -1,12 +1,15 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Permalinks
+permalink:           pretty
 
-# Site settings
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
 title: Thoughts
+tagline: ""
 email: me@cyriacthomas.com
 description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -25,6 +28,11 @@ gravatar_hash: "0ffdfa5b2f07204093bb08825f2ec9f1.png"
 markdown: kramdown
 exclude: [vendor]
 gems: [jekyll-paginate]
+analytics_id: "UA-12946032-1"
 
 paginate: 4
 paginate_path: "/blog-page-:num/"
+# Gems
+gems:
+  - jekyll-paginate
+#  - jekyll-gist
